@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikkie AI CBE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- MATRIX BACKGROUND -->
+<canvas id="matrixCanvas" class="matrix-bg"></canvas>
+
+<!-- THEME TOGGLE -->
+<button id="themeToggle">Toggle Light/Dark</button>
+
+<!-- PANEL FOR SUBJECT BUTTONS -->
+<div id="panel">
+  <button onclick="showSection('mathematics')">Mathematics</button>
+  <button onclick="showSection('business_studies')">Business Studies</button>
+  <button onclick="showSection('geography')">Geography</button>
+  <button onclick="showSection('history_citizenship')">History & Citizenship</button>
+  <button onclick="showSection('sports_science')">Sports Science</button>
+  <button onclick="showSection('visual_arts')">Visual Arts</button>
+  <button onclick="showSection('performing_arts')">Performing Arts</button>
+</div>
+
+<!-- ========== SUBJECT SECTIONS ========== -->
+<!-- MATHEMATICS SECTION -->
+<div id="mathematics" class="subject-section" style="display:none;">
+  <h2>Mathematics</h2>
+  <h3>Competencies</h3>
+  <ul>
+    <li>Apply algebraic techniques to solve real-world problems.</li>
+    <li>Use geometry to analyze shapes and measurements in daily life.</li>
+    <li>Interpret statistical data and represent it diagrammatically.</li>
+    <li>Perform calculations involving financial literacy and percentages.</li>
+    <li>Use ICT tools for problem-solving in mathematics.</li>
+  </ul>
+  <h3>Notes</h3>
+  <p>
+    <strong>Algebra:</strong> Simplifying expressions, solving linear and quadratic equations, factorization, substitution.<br>
+    <strong>Geometry:</strong> Angles, triangles, quadrilaterals, circles, Pythagoras theorem, coordinate geometry.<br>
+    <strong>Statistics:</strong> Mean, median, mode, frequency tables, bar graphs, histograms, pie charts.<br>
+    <strong>Financial Maths:</strong> Interest calculations, percentages, ratios, budgeting exercises.<br>
+    <strong>Problem Solving:</strong> Applying mathematical reasoning to real-life situations.
+  </p>
+  <h3>Activities / Experiments</h3>
+  <ol>
+    <li>Measure classroom objects and calculate area/volume.</li>
+    <li>Collect class data and represent it using pie charts and bar graphs.</li>
+    <li>Solve real-life word problems involving percentages and ratios.</li>
+    <li>Use a spreadsheet to compute statistics and create graphs.</li>
+  </ol>
+  <h3>Quizzes</h3>
+  <ol>
+    <li>Solve: 2x + 5 = 17</li>
+    <li>Calculate the area of a triangle with base 8 cm and height 5 cm.</li>
+    <li>Convert 25% into a fraction and decimal.</li>
+    <li>Create a bar graph for the following data: [10, 15, 12, 20]</li>
+  </ol>
+  <h3>Projects</h3>
+  <ul>
+    <li>Design a mini-budget for a week using percentages and ratios.</li>
+    <li>Collect data from your environment (e.g., heights of classmates) and represent it diagrammatically.</li>
+    <li>Create a real-life word problem and solve it step-by-step.</li>
+  </ul>
+  <h3>Reflection</h3>
+  <p>Write a short reflection on how mathematical skills can be applied in everyday life and future career paths.</p>
+</div>
+
+<!-- BUSINESS STUDIES SECTION -->
+<div id="business_studies" class="subject-section" style="display:none;">
+  <h2>Business Studies</h2>
+  <h3>Competencies</h3>
+  <ul>
+    <li>Understand business environments and entrepreneurship.</li>
+    <li>Apply financial literacy skills in real-life scenarios.</li>
+    <li>Analyze business operations and markets.</li>
+    <li>Develop business plans and make decisions ethically.</li>
+    <li>Use ICT tools for business management and communication.</li>
+  </ul>
+  <h3>Notes</h3>
+  <p>
+    <strong>Business Environment:</strong> Types of businesses, markets, customers, stakeholders.<br>
+    <strong>Entrepreneurship:</strong> Business ideas, planning, startups, risk management.<br>
+    <strong>Financial Literacy:</strong> Budgeting, accounting basics, savings, investment.<br>
+    <strong>Marketing:</strong> Product, price, place, promotion, customer service.<br>
+    <strong>ICT in Business:</strong> Digital payments, online marketing, spreadsheets, record keeping.
+  </p>
+  <h3>Activities / Experiments</h3>
+  <ol>
+    <li>Design a simple business plan for a small venture.</li>
+    <li>Create a budget for a week using real-life scenarios.</li>
+    <li>Conduct a simple market survey and record results.</li>
+    <li>Simulate business transactions using mock money.</li>
+  </ol>
+  <h3>Quizzes</h3>
+  <ol>
+    <li>List the four P’s of marketing.</li>
+    <li>Explain the importance of budgeting in a business.</li>
+    <li>Identify stakeholders in a given business scenario.</li>
+    <li>What are three qualities of a successful entrepreneur?</li>
+  </ol>
+  <h3>Projects</h3>
+  <ul>
+    <li>Start a mini-business at school and track its performance.</li>
+    <li>Create a poster advertising a product or service.</li>
+    <li>Analyze the costs and benefits of a small business idea.</li>
+  </ul>
+  <h3>Reflection</h3>
+  <p>Reflect on how business knowledge can help manage personal finances and future career opportunities.</p>
+</div>
+
+<!-- GEOGRAPHY, HISTORY, SPORTS, VISUAL & PERFORMING ARTS -->
+<!-- Paste other sections similarly, as you already have -->
+
+<!-- ========== DASHBOARDS ========== -->
+<div id="studentDashboard" class="subject-section">
+  <h2>Student Dashboard</h2>
+  <label for="studentName">Name:</label>
+  <input type="text" id="studentName" placeholder="Enter name">
+  <label for="county">County:</label>
+  <input type="text" id="county" placeholder="Enter county">
+  <label for="school">School:</label>
+  <input type="text" id="school" placeholder="Enter school">
+  <button onclick="saveStudent()">Save</button>
+</div>
+
+<div id="teacherDashboard" class="subject-section">
+  <h2>Teacher Dashboard</h2>
+  <label for="teacherName">Name:</label>
+  <input type="text" id="teacherName" placeholder="Enter name">
+  <button onclick="saveTeacher()">Save</button>
+</div>
+
+<div id="adminDashboard" class="subject-section">
+  <h2>Admin Dashboard</h2>
+  <label for="adminName">Name:</label>
+  <input type="text" id="adminName" placeholder="Enter name">
+  <button onclick="saveAdmin()">Save</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
