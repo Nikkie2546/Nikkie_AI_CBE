@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Nikkie Learning Platform v13 - Offline</title>
+<style>
+  html, body { margin:0; padding:0; height:100%; width:100%; background:#000; color:#0f0; font-family:Consolas, monospace; overflow:hidden; }
+  #matrixCanvas { position:fixed; top:0; left:0; width:100%; height:100%; z-index:0; }
+  #bootScreen { position:fixed; inset:0; background:rgba(0,0,0,0.95); color:#0f0; font-size:16px; padding:20px; white-space:pre-line; overflow-y:auto; z-index:2; }
+  #app { display:none; padding:20px; position:relative; z-index:2; height:100%; overflow-y:auto; box-sizing:border-box; }
+  button, select, input, textarea { background:#111; color:#0f0; border:1px solid #0f0; padding:15px; margin:5px 0; font-size:16px; width:100%; box-sizing:border-box; border-radius:8px; touch-action: manipulation; }
+  .section { background:#050505; padding:15px; border:1px solid #0f0; margin:10px 0; border-radius:8px; }
+  textarea { height:120px; resize:none; }
+  .blink { animation: blink 1s infinite; }
+  @keyframes blink {0%,50%,100%{opacity:1;}25%,75%{opacity:0;}}
+  footer { text-align:center; font-size:12px; margin:20px 0; color:#0f0; }
+</style>
+</head>
+<body>
+
+<canvas id="matrixCanvas"></canvas>
+<div id="bootScreen"></div>
+<div id="app">
+  <h1>Nikkie Learning Platform v13</h1>
+  <button onclick="studentLogin()">Student Login/Signup</button>
+  <button onclick="enterTeacher()">Teacher Mode</button>
+  <button onclick="enterAdmin()">Master Admin</button>
+  <button onclick="openSettings()">Settings</button>
+  <div id="panel"></div>
+  <footer>© 2026 Nikkie Learning Platform</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
